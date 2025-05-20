@@ -45,7 +45,7 @@
       align-items: center;
       padding: 1rem 2rem;
       background-color: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(20px);
       z-index: 100;
     }
 
@@ -110,11 +110,27 @@
       color: #777;
       font-size: 0.9rem;
     }
+    /* 주석입니다 자주사용하게 되실거에요 */
+    .alertPopup {
+      display: none;
+    }
+    .alertPopup.on {
+      display: block;
+      background-color: #fff;
+      width: 100px;
+      height: 100px;
+      color: #000;
+    }
+
+    /* css 주석입니다. */
   </style>
 </head>
 <body>
+  <!-- html 주석입니다. -->
   <nav>
-    <div class="logo">Jiyoon Lee</div>
+    <div class="logo">
+      <a href="javascript:void(0);" class="jiyoon">Jiyoon</a> 
+    </div>
     <ul>
       <li><a href="./new.html" target="_blank" >New</a></li>
       <li><a href="#about">About</a></li>
@@ -125,7 +141,7 @@
 
   <header>
     <h1>Hi, I'm Jiyoon.<br>UI/UX Designer</h1>
-    <p>사용자 중심 디자인으로 세상을 더 편리하게 만듭니다.</p>
+    <p>사용자 중심 디자인으로 세상을 더 편리하게 만듭니다!!!!!</p>
   </header>
 
   <section id="about">
@@ -150,8 +166,21 @@
     <p>이메일: youremail@example.com<br>LinkedIn / Behance / Instagram</p>
   </section>
 
+  <div class="alertPopup">
+    이름만 얼럿창입니다. 크롬에서 제공해 주는게 아니라 커스텀한것 꾸민것
+  </div>
+
   <footer>
     © 2025 Jiyun Lee. All rights reserved.
   </footer>
 </body>
+
+<script>
+ /* script 주석입니다. */
+ document.querySelector(".jiyoon").addEventListener('click', function(){
+    document.querySelector(".alertPopup").classList.add('on');
+ })
+</script>
+
+
 </html>
